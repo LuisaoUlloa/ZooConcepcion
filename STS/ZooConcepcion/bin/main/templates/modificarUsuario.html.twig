@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+
+{% block titulo %}
+Modificar Usuario
+{% endblock titulo %}
+
+
+
+{% block contenido %}
+<form action="actualizar" method="POST">
+	<table>
+		<tr>
+		   <input type="hidden" name="txtId" value="{{ a.getId() }}" />
+			<td><label>Usuario </label></td>
+			<td><input type="text" name="txtNombre" id="txtNombre" required
+				minlength="3" maxlength="30" value="{{ a.getUsuario() }}"></td>
+		</tr>
+		<tr>
+			<td><label>Clave </label></td>
+			<td><input type="password" name="txtPassword" id="txtPassword" required
+				minlength="3" maxlength="50" value="{{ a.getClave() }}"></td>	  
+		</tr>
+		<tr>
+			<!--comentario este td fue utilizado para que el boton quede al lado derecho-->
+			<td></td>
+			<td><input type="submit" value="Modificar" name="btnModificar"
+				id="btnModificar"></td>
+		</tr>
+	</table>
+
+</form>
+<h3>
+	{{ mensaje }}
+</h3>
+
+
+{% endblock contenido %}

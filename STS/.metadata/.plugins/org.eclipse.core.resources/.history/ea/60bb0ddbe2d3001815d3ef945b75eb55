@@ -1,0 +1,33 @@
+package com.ZooConcepcion.web.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.ZooConcepcion.web.DAO.AnimalDao;
+import com.ZooConcepcion.web.DAO.SectorDao;
+import com.ZooConcepcion.web.DAO.TipoDao;
+
+@Controller
+@RequestMapping("/animal")
+public class AnimalController {
+	
+	
+	@Autowired
+	private AnimalDao aDao;
+	
+	@Autowired
+	private SectorDao sDao;
+	
+	@Autowired
+	private TipoDao tDao;
+	
+	@GetMapping("/listar")
+	public String listar(Model model)
+	{
+		return "listar.html";
+	}
+
+}

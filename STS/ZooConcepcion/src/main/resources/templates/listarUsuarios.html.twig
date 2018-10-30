@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+
+{% block titulo  %}
+Listado de Usuarios
+{% endblock titulo %}
+
+{% block contenido %}
+<h1>Listado de Usuarios</h1>
+
+<table>
+	<tr>
+		<th>Nombre</th>
+		
+	</tr>
+	{% for a in usuarios %}
+
+	<tr>
+
+		<td>{{ a.getUsuario() }}</td>
+		<td><a href="eliminar?id={{ a.getId() }}">Eliminar</a></td>
+		<td><a href="editar?id={{ a.getId() }}">Modificar</a></td>
+
+	</tr>
+
+	{% endfor %}
+</table>
+<h4>
+	{{ mensaje }}
+</h4>
+{% endblock contenido %}

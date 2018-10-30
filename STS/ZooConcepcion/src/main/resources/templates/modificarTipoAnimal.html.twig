@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+
+{% block titulo %}
+Modificar Tipo Animal
+{% endblock titulo %}
+
+
+
+{% block contenido %}
+<form action="actualizar" method="POST">
+	<table>
+		<tr>
+		   <input type="hidden" name="txtId" value="{{ a.getId() }}" />
+			<td><label>Nombre </label></td>
+			<td><input type="text" name="txtNombre" id="txtNombre" required
+				minlength="3" maxlength="30" value="{{ a.getNombre() }}"></td>
+		</tr>
+		<tr>
+			<td><label>Descripcion </label></td>
+			<td><input type="text" name="txtDescripcion" id="txtDescripcion" required
+				minlength="3" maxlength="50" value="{{ a.getDescripcion() }}"></td>	  
+		</tr>
+		<tr>
+			<!--comentario este td fue utilizado para que el boton quede al lado derecho-->
+			<td></td>
+			<td><input type="submit" value="Modificar" name="btnModificar"
+				id="btnModificar"></td>
+		</tr>
+	</table>
+
+</form>
+<h3>
+	{{ mensaje }}
+</h3>
+
+
+{% endblock contenido %}

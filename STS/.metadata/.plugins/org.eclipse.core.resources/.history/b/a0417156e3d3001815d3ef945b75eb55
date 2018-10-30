@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Document</title>
+</head>
+<body>
+	<h1>Listado de Animales</h1>
+
+	<table>
+		<tr>
+			<th>Nombre</th>
+			<th>Peso</th>
+			<th>Tipo</th>
+			<th>Genero</th>
+			<th>Fecha de Nacimiento</th>
+			<th>Sector</th>
+			<th>Fecha de Ingreso</th>
+			<th>Fecha de Defuncion</th>
+
+		</tr>
+		{% for a in animales %}
+
+		<tr>
+
+			<td>{{ a.getNombre()}}</td>
+			<td>{{ a.getPeso()}}</td>
+			<td>{{ a.getTipo().getNombre()}}</td>
+			<td>{{ a.getGenero()}}</td>
+			<td>{{ a.getFechaNacimiento() | date("dd-MM-yyyy")) }}</td>
+			<td>{{ a.getSector().getNombre()}}</td>
+			<td>{{ a.getFechaIngreso() | date("dd-MM-yyyy"))}}</td>
+			<td>{{ a.getFechaDefuncion() | date("dd-MM-yyyy"))}}</td>
+			
+		</tr>
+
+		{% endfor %}
+	</table>
+</body>
+</html>

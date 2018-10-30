@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+
+{% block titulo  %}
+Listado de Sectores de Animales
+{% endblock titulo %}
+
+{% block contenido %}
+<h1>Listado de Sectores de Animales</h1>
+
+<table>
+	<tr>
+		<th>Nombre</th>
+		<th>Descripcion</th>
+	</tr>
+	{% for a in sectores %}
+
+	<tr>
+
+		<td>{{ a.getNombre() }}</td>
+		<td>{{ a.getDescripcion() }}</td>
+		<td><a href="eliminar?id={{ a.getId() }}">Eliminar</a></td>
+		<td><a href="editar?id={{ a.getId() }}">Modificar</a></td>
+
+	</tr>
+
+	{% endfor %}
+</table>
+<h4>
+	{{ mensaje }}
+</h4>
+{% endblock contenido %}

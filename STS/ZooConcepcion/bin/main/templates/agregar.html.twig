@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block titulo  %}
+Agregar Animal
+{% endblock titulo %}
+
+{% block contenido %}
+<h1>Ingreso de animales</h1>
+<form action="almacenar" method="POST">
+	<table>
+		<tr>
+			<td><label>Nombre </label></td>
+			<td><input type="text" name="txtNombre" id="txtNombre" required
+				minlength="3" maxlength="30"></td>
+		</tr>
+		<tr>
+			<td><label>Peso </label></td>
+			<td><input type="number" name="txtPeso" id="txtPeso" step="0.1"
+				required min="0,1" max="200"></td>
+		</tr>
+		<tr>
+			<td><label>Tipo Animal </label></td>
+			<td><select name="cboTipo" id="cboTipo" required>
+					<option value="">Seleccionar:</option>
+					{% for tipo in tipos %}
+
+					<option value="{{ tipo.getId() }}">{{ tipo.getNombre() }}</option>
+
+					{% endfor %}
+
+			</select></td>
+		</tr>
+		<tr>
+			<td><label>Genero</label></td>
+			<td><select name="cboGenero" id="cboGenero" required>
+					<option value="">Seleccionar:</option>
+					<option value="0">Hembra</option>
+                    <option value="1">Macho</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td><label>Fecha Nacimiento </label></td>
+			<td><input type="date" name="txtFechaNacimiento"
+				id="txtFechaNacimiento"></td>
+		</tr>
+		<tr>
+			<td><label>Sector</label></td>
+			<td><select name="cboSector" id="cboSector" required>
+					<option value="">Seleccionar:</option>
+					{% for sec in sector %}
+
+					<option value="{{ sec.getId() }}">{{ sec.getNombre() }}</option>
+
+					{% endfor %}
+
+			</select></td>
+		</tr>
+
+		<tr>
+			<td><label>Fecha de Ingreso </label></td>
+			<td><input type="date" name="txtFechaIngreso"
+				id="txtFechaIngreso" required></td>
+		</tr>
+		<tr>
+			<td><label>Fecha de Defuncion </label></td>
+			<td><input type="date" name="txtFechaDefuncion"
+				id="txtFechaDefuncion" ></td>
+		</tr>
+		<tr>
+			<!--comentario este td fue utilizado para que el boton quede al lado derecho-->
+			<td></td>
+			<td><input type="submit" value="Guardar" name="btnGuardar"
+				id="btnGuardar"></td>
+		</tr>
+	</table>
+
+</form>
+<h3>
+	{{ mensaje }}
+</h3>
+
+{% endblock contenido %}

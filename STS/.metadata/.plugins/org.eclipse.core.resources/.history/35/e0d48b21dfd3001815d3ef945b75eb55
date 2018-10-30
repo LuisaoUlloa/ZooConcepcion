@@ -1,0 +1,8 @@
+package com.ZooConcepcion.web.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class AnimalController {
+
+}

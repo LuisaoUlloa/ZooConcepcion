@@ -1,0 +1,5 @@
+package com.ZooConcepcion.web.DAO;
+
+public class TipoDao {
+
+}

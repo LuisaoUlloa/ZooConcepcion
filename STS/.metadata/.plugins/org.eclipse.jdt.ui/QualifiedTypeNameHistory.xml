@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+<fullyQualifiedTypeName name="com.ZooConcepcion.web.entity.Animal"/>
+<fullyQualifiedTypeName name="com.ZooConcepcion.web.DAO.IAnimalDao"/>
+<fullyQualifiedTypeName name="com.ZooConcepcion.web.entity.Sector"/>
+<fullyQualifiedTypeName name="com.ZooConcepcion.web.DAO.ISectorDao"/>
+<fullyQualifiedTypeName name="com.ZooConcepcion.web.entity.Tipo"/>
+<fullyQualifiedTypeName name="com.ZooConcepcion.web.DAO.ITipoDao"/>
+<fullyQualifiedTypeName name="org.springframework.data.repository.CrudRepository"/>
+<fullyQualifiedTypeName name="com.ZooConcepcion.web.entity.Usuario"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+<fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+<fullyQualifiedTypeName name="com.ZooConcepcion.web.DAO.IUsuarioDao"/>
+<fullyQualifiedTypeName name="com.ZooConcepcion.web.DAO.AnimalDao"/>
+<fullyQualifiedTypeName name="com.ZooConcepcion.web.DAO.SectorDao"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.ZooConcepcion.web.DAO.TipoDao"/>
+</qualifiedTypeNameHistroy>
